@@ -47,7 +47,7 @@ class Simulador {
   - grafo: Grafo
   - buses: List<Bus>
   - tiempoActual: int
-  - tiemposEspera: Map<Paradero, List<Integer>>
+  - tiemposEspera: Map<Paradero>, List<<integer>>
   + tick()
 }
 
