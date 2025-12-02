@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Clase principal que demuestra el uso de la simulación de transporte.
  */
-public class Main {
+public class Maintest {
     public static void main(String[] args) {
         System.out.println("=== SIMULADOR DE RED DE TRANSPORTE ===\n");
 
@@ -25,10 +25,10 @@ public class Main {
         grafo.agregarParadero(parada4);
 
         // 3. Crear arcos (conexiones entre paradas con tiempos)
-        grafo.agregarArco(parada1, parada2, 10);  // Centro -> Terminal (10 min)
-        grafo.agregarArco(parada2, parada3, 8);   // Terminal -> Hospital (8 min)
-        grafo.agregarArco(parada3, parada4, 12);  // Hospital -> Universidad (12 min)
-        grafo.agregarArco(parada4, parada1, 15);  // Universidad -> Centro (15 min)
+        grafo.agregarArco(parada1, parada2, 10);  // Centro a Terminal (10 min)
+        grafo.agregarArco(parada2, parada3, 8);   // Terminal a Hospital (8 min)
+        grafo.agregarArco(parada3, parada4, 12);  // Hospital a Universidad (12 min)
+        grafo.agregarArco(parada4, parada1, 15);  // Universidad a Centro (15 min)
         // Arcos de vuelta
         grafo.agregarArco(parada2, parada1, 10);
         grafo.agregarArco(parada3, parada2, 8);

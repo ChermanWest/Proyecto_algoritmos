@@ -1,0 +1,83 @@
+\doxysection{Transporte.\+Bus Class Reference}
+\hypertarget{class_transporte_1_1_bus}{}\label{class_transporte_1_1_bus}\index{Transporte.Bus@{Transporte.Bus}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transporte_1_1_bus_a29d625400fb84d08b5baf032801f8de0}{Bus}} (int id, int capacidad\+Max, List$<$ \mbox{\hyperlink{class_transporte_1_1_nodo}{Nodo}} $>$ ruta\+Ida, List$<$ \mbox{\hyperlink{class_transporte_1_1_nodo}{Nodo}} $>$ ruta\+Vuelta)
+\item 
+\Hypertarget{class_transporte_1_1_bus_ab23537aa8291ee2bfe1e836cd7a7a8a0}\label{class_transporte_1_1_bus_ab23537aa8291ee2bfe1e836cd7a7a8a0} 
+int {\bfseries get\+Id} ()
+\item 
+\Hypertarget{class_transporte_1_1_bus_ac1e57725354ecb352f0977008aa6d0fe}\label{class_transporte_1_1_bus_ac1e57725354ecb352f0977008aa6d0fe} 
+int {\bfseries get\+Capacidad\+Max} ()
+\item 
+\Hypertarget{class_transporte_1_1_bus_ace60a63fdba4650c9156fe335d904f43}\label{class_transporte_1_1_bus_ace60a63fdba4650c9156fe335d904f43} 
+int {\bfseries get\+Capacidad\+Actual} ()
+\item 
+\Hypertarget{class_transporte_1_1_bus_a62e6d34974ebd7b2c1e3606a72a58773}\label{class_transporte_1_1_bus_a62e6d34974ebd7b2c1e3606a72a58773} 
+List$<$ \mbox{\hyperlink{class_transporte_1_1_pasajero}{Pasajero}} $>$ {\bfseries get\+Pasajeros} ()
+\item 
+\Hypertarget{class_transporte_1_1_bus_aae64337feedf21ffda4a41689e0fd386}\label{class_transporte_1_1_bus_aae64337feedf21ffda4a41689e0fd386} 
+\mbox{\hyperlink{class_transporte_1_1_nodo}{Nodo}} {\bfseries get\+Nodo\+Actual} ()
+\item 
+void \mbox{\hyperlink{class_transporte_1_1_bus_a14ee00db7e208aa5c9daa8fbd81adaf3}{avanzar}} ()
+\item 
+void \mbox{\hyperlink{class_transporte_1_1_bus_a43b670ea1325075659cb0947c092cc18}{subir\+Pasajeros}} ()
+\item 
+void \mbox{\hyperlink{class_transporte_1_1_bus_ae940ebdb5ba58208425bc83e2169ac0b}{bajar\+Pasajeros}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa un bus en la red de transporte. El bus se mueve a través de una ruta predefinida, recogiendo y dejando pasajeros. 
+
+\label{doc-constructors}
+\Hypertarget{class_transporte_1_1_bus_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_transporte_1_1_bus_a29d625400fb84d08b5baf032801f8de0}\index{Transporte.Bus@{Transporte.Bus}!Bus@{Bus}}
+\index{Bus@{Bus}!Transporte.Bus@{Transporte.Bus}}
+\doxysubsubsection{\texorpdfstring{Bus()}{Bus()}}
+{\footnotesize\ttfamily \label{class_transporte_1_1_bus_a29d625400fb84d08b5baf032801f8de0} 
+Transporte.\+Bus.\+Bus (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{int}]{capacidad\+Max}{, }\item[{List$<$ \mbox{\hyperlink{class_transporte_1_1_nodo}{Nodo}} $>$}]{ruta\+Ida}{, }\item[{List$<$ \mbox{\hyperlink{class_transporte_1_1_nodo}{Nodo}} $>$}]{ruta\+Vuelta}{}\end{DoxyParamCaption})}
+
+Crea una nueva instancia de \doxylink{class_transporte_1_1_bus}{Bus} con una capacidad específica y rutas definidas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único del bus. \\
+\hline
+{\em capacidad\+Max} & Capacidad máxima de pasajeros. \\
+\hline
+{\em ruta\+Ida} & Lista de nodos para la ruta de ida. \\
+\hline
+{\em ruta\+Vuelta} & Lista de nodos para la ruta de vuelta. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_transporte_1_1_bus_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transporte_1_1_bus_a14ee00db7e208aa5c9daa8fbd81adaf3}\index{Transporte.Bus@{Transporte.Bus}!avanzar@{avanzar}}
+\index{avanzar@{avanzar}!Transporte.Bus@{Transporte.Bus}}
+\doxysubsubsection{\texorpdfstring{avanzar()}{avanzar()}}
+{\footnotesize\ttfamily \label{class_transporte_1_1_bus_a14ee00db7e208aa5c9daa8fbd81adaf3} 
+void Transporte.\+Bus.\+avanzar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+El bus avanza a la siguiente parada en su ruta. \Hypertarget{class_transporte_1_1_bus_ae940ebdb5ba58208425bc83e2169ac0b}\index{Transporte.Bus@{Transporte.Bus}!bajarPasajeros@{bajarPasajeros}}
+\index{bajarPasajeros@{bajarPasajeros}!Transporte.Bus@{Transporte.Bus}}
+\doxysubsubsection{\texorpdfstring{bajarPasajeros()}{bajarPasajeros()}}
+{\footnotesize\ttfamily \label{class_transporte_1_1_bus_ae940ebdb5ba58208425bc83e2169ac0b} 
+void Transporte.\+Bus.\+bajar\+Pasajeros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+El bus deja bajar a los pasajeros cuyo destino es la parada actual. \Hypertarget{class_transporte_1_1_bus_a43b670ea1325075659cb0947c092cc18}\index{Transporte.Bus@{Transporte.Bus}!subirPasajeros@{subirPasajeros}}
+\index{subirPasajeros@{subirPasajeros}!Transporte.Bus@{Transporte.Bus}}
+\doxysubsubsection{\texorpdfstring{subirPasajeros()}{subirPasajeros()}}
+{\footnotesize\ttfamily \label{class_transporte_1_1_bus_a43b670ea1325075659cb0947c092cc18} 
+void Transporte.\+Bus.\+subir\+Pasajeros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+El bus intenta recoger pasajeros de la parada actual. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bus.\+java\end{DoxyCompactItemize}
