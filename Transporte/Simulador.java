@@ -10,7 +10,7 @@ public class Simulador {
     private Grafo grafo;
     private List<Bus> buses;
     private int tiempoActual;  // tiempo simulado en minutos
-    private Map<Nodo, List<Integer>> tiemposEspera;  // historial de tiempos de espera por parada
+    private Map<Nodo, List<Long>> tiemposEspera;  // historial de tiempos de espera por parada
     private Random random;
 
     public Simulador(Grafo grafo) {
@@ -88,10 +88,10 @@ public class Simulador {
      */
     private void registrarTiemposEspera() {
         for (Nodo parada : grafo.getParaderos()) {
-            int tiempoPromedio = 0;
+            long tiempoPromedio = 0;
             if (!parada.getCola().isEmpty()) {
                 for (Pasajero p : parada.getCola()) {
-                    tiempoPromedio += (System.currentTimeMillis() - p.getTiempoInicio());
+                    tiempoPromedio += p.getTiempoEsperaMillis();
                 }
                 tiempoPromedio /= parada.getCola().size();
                 tiemposEspera.get(parada).add(tiempoPromedio);
@@ -117,9 +117,9 @@ public class Simulador {
         System.out.println("\nTiempos promedio de espera por parada:");
 
         for (Nodo parada : grafo.getParaderos()) {
-            List<Integer> tiempos = tiemposEspera.get(parada);
+            List<Long> tiempos = tiemposEspera.get(parada);
             if (!tiempos.isEmpty()) {
-                int promedio = tiempos.stream().mapToInt(Integer::intValue).sum() / tiempos.size();
+                long promedio = tiempos.stream().mapToLong(Long::longValue).sum() / tiempos.size();
                 System.out.println("  " + parada.getNombre() + ": " + promedio + " ms (muestras: " + tiempos.size() + ")");
             } else {
                 System.out.println("  " + parada.getNombre() + ": sin datos");

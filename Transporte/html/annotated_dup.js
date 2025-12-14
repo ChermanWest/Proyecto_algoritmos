@@ -7,6 +7,7 @@ var annotated_dup =
       [ "Maintest", "class_transporte_1_1_maintest.html", null ],
       [ "Nodo", "class_transporte_1_1_nodo.html", "class_transporte_1_1_nodo" ],
       [ "Pasajero", "class_transporte_1_1_pasajero.html", "class_transporte_1_1_pasajero" ],
-      [ "Simulador", "class_transporte_1_1_simulador.html", "class_transporte_1_1_simulador" ]
+      [ "Simulador", "class_transporte_1_1_simulador.html", "class_transporte_1_1_simulador" ],
+      [ "TransporteGUI", "class_transporte_1_1_transporte_g_u_i.html", "class_transporte_1_1_transporte_g_u_i" ]
     ] ]
 ];

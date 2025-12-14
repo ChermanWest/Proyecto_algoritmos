@@ -429,28 +429,80 @@ public class TransporteGUI extends JFrame {
             Nodo parada3 = new Nodo(3, "Hospital", 500.0, 450.0);
             Nodo parada4 = new Nodo(4, "Universidad", 200.0, 450.0);
 
+            // Paradas adicionales
+            Nodo parada5 = new Nodo(5, "Parque", 350.0, 80.0);
+            Nodo parada6 = new Nodo(6, "Museo", 660.0, 150.0);
+            Nodo parada7 = new Nodo(7, "Estacion", 50.0, 150.0);
+            Nodo parada8 = new Nodo(8, "Plaza", 350.0, 300.0);
+            Nodo parada9 = new Nodo(9, "Mercado", 660.0, 450.0);
+            Nodo parada10 = new Nodo(10, "Aeropuerto", 350.0, 520.0);
+
             grafo.agregarParadero(parada1);
             grafo.agregarParadero(parada2);
             grafo.agregarParadero(parada3);
             grafo.agregarParadero(parada4);
+            grafo.agregarParadero(parada5);
+            grafo.agregarParadero(parada6);
+            grafo.agregarParadero(parada7);
+            grafo.agregarParadero(parada8);
+            grafo.agregarParadero(parada9);
+            grafo.agregarParadero(parada10);
 
-            // 3. Crear arcos (Ida y Vuelta)
+            // 3. Crear arcos (Ida y Vuelta) para red ampliada
             grafo.agregarArco(parada1, parada2, 10);
             grafo.agregarArco(parada2, parada3, 8);
             grafo.agregarArco(parada3, parada4, 12);
             grafo.agregarArco(parada4, parada1, 15);
-            
+
+            // Conexiones adicionales
+            grafo.agregarArco(parada1, parada5, 6); // Centro -> Parque
+            grafo.agregarArco(parada5, parada2, 7); // Parque -> Terminal
+            grafo.agregarArco(parada2, parada6, 4); // Terminal -> Museo
+            grafo.agregarArco(parada6, parada9, 10); // Museo -> Mercado
+            grafo.agregarArco(parada9, parada3, 5); // Mercado -> Hospital
+            grafo.agregarArco(parada3, parada8, 6); // Hospital -> Plaza
+            grafo.agregarArco(parada8, parada4, 6); // Plaza -> Universidad
+            grafo.agregarArco(parada4, parada10, 7); // Universidad -> Aeropuerto
+            grafo.agregarArco(parada10, parada8, 6); // Aeropuerto -> Plaza
+            grafo.agregarArco(parada1, parada7, 5); // Centro -> Estacion
+            grafo.agregarArco(parada7, parada5, 10); // Estacion -> Parque
+            grafo.agregarArco(parada5, parada8, 8); // Parque -> Plaza
+
+            // Arcos de retorno (Ida/Vuelta)
             grafo.agregarArco(parada2, parada1, 10);
             grafo.agregarArco(parada3, parada2, 8);
             grafo.agregarArco(parada4, parada3, 12);
             grafo.agregarArco(parada1, parada4, 15);
+            grafo.agregarArco(parada5, parada1, 6);
+            grafo.agregarArco(parada2, parada5, 7);
+            grafo.agregarArco(parada6, parada2, 4);
+            grafo.agregarArco(parada9, parada6, 10);
+            grafo.agregarArco(parada3, parada9, 5);
+            grafo.agregarArco(parada8, parada3, 6);
+            grafo.agregarArco(parada4, parada8, 6);
+            grafo.agregarArco(parada10, parada4, 7);
+            grafo.agregarArco(parada8, parada10, 6);
+            grafo.agregarArco(parada7, parada1, 5);
+            grafo.agregarArco(parada5, parada7, 10);
+            grafo.agregarArco(parada8, parada5, 8);
 
-            // 4. Definir Rutas
+            // 4. Definir Rutas (rutas más largas aprovechando las nuevas paradas)
             List<Nodo> rutaIda = new ArrayList<>();
-            rutaIda.add(parada1); rutaIda.add(parada2); rutaIda.add(parada3); rutaIda.add(parada4);
+            rutaIda.add(parada1); // Centro
+            rutaIda.add(parada7); // Estacion
+            rutaIda.add(parada5); // Parque
+            rutaIda.add(parada2); // Terminal
+            rutaIda.add(parada6); // Museo
+            rutaIda.add(parada9); // Mercado
+            rutaIda.add(parada3); // Hospital
+            rutaIda.add(parada8); // Plaza
+            rutaIda.add(parada4); // Universidad
+            rutaIda.add(parada10); // Aeropuerto
 
             List<Nodo> rutaVuelta = new ArrayList<>();
-            rutaVuelta.add(parada4); rutaVuelta.add(parada3); rutaVuelta.add(parada2); rutaVuelta.add(parada1);
+            rutaVuelta.add(parada10); rutaVuelta.add(parada4); rutaVuelta.add(parada8);
+            rutaVuelta.add(parada3); rutaVuelta.add(parada9); rutaVuelta.add(parada6);
+            rutaVuelta.add(parada2); rutaVuelta.add(parada5); rutaVuelta.add(parada7); rutaVuelta.add(parada1);
 
             // 5. Instanciar Simulador
             Simulador simulador = new Simulador(grafo);
@@ -462,9 +514,13 @@ public class TransporteGUI extends JFrame {
             simulador.agregarBus(bus1);
             simulador.agregarBus(bus2);
 
-            // 7. Agregar Pasajeros Iniciales
+            // 7. Agregar Pasajeros Iniciales (en diferentes paradas)
             parada1.agregarPasajero(new Pasajero(101, "Terminal", System.currentTimeMillis()));
             parada3.agregarPasajero(new Pasajero(102, "Centro", System.currentTimeMillis()));
+            parada5.agregarPasajero(new Pasajero(103, "Museo", System.currentTimeMillis()));
+            parada6.agregarPasajero(new Pasajero(104, "Plaza", System.currentTimeMillis()));
+            parada9.agregarPasajero(new Pasajero(105, "Centro", System.currentTimeMillis()));
+            parada10.agregarPasajero(new Pasajero(106, "Terminal", System.currentTimeMillis()));
 
             // 8. Iniciar Ventana
             new TransporteGUI(simulador);

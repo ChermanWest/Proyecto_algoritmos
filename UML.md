@@ -1,72 +1,75 @@
-@startuml
 
-class Paradero {
-  - id: int
-  - nombre: String
-  - cola: Queue<Pasajero>
-  - posicionX: double
-  - posicionY: double
-  + agregarPasajero(Pasajero)
-  + removerPasajero(): Pasajero
-}
+**Mermaid (classDiagram)**
 
-class Pasajero {
-  - id: int
-  - destino: Paradero
-  - tiempoLlegada: int
-}
+```mermaid
+classDiagram
+    class Paradero {
+      - int id
+      - String nombre
+      - Queue of Pasajero cola
+      - double posicionX
+      - double posicionY
+      + agregarPasajero(Pasajero)
+      + removerPasajero(): Pasajero
+    }
 
-class Arco {
-  - origen: Paradero
-  - destino: Paradero
-  - tiempo: int
-}
+    class Pasajero {
+      - int id
+      - Paradero destino
+      - int tiempoLlegada
+    }
 
-class Grafo {
-  - paraderos: List<Paradero>
-  - adj: Map<Paradero, List<Arco>>
-  + agregarParadero(Paradero)
-  + agregarArco(Paradero,Paradero,int)
-  + dijkstra(Paradero,Paradero)
-}
+    class Arco {
+      - Paradero origen
+      - Paradero destino
+      - int tiempo
+    }
 
-class Bus {
-  - id: int
-  - capacidadMax: int = 40
-  - pasajeros: List<Pasajero>
-  - rutaIda: List<Paradero>
-  - rutaVuelta: List<Paradero>
-  - indiceActual: int
-  - enIda: boolean
-  + avanzar10Min()
-  + subirPasajeros()
-  + bajarPasajeros()
-}
+    class Grafo {
+      - List of Paradero paraderos
+      - Map Paradero->List of Arco adj
+      + agregarParadero(Paradero)
+      + agregarArco(Paradero,Paradero,int)
+      + dijkstra(Paradero,Paradero)
+    }
 
-class Simulador {
-  - grafo: Grafo
-  - buses: List<Bus>
-  - tiempoActual: int
-  - tiemposEspera: Map<Paradero>, List<<integer>>
-  + tick()
-}
+    class Bus {
+      - int id
+      - int capacidadMax = 40
+      - List of Pasajero pasajeros
+      - List of Paradero rutaIda
+      - List of Paradero rutaVuelta
+      - int indiceActual
+      - boolean enIda
+      + avanzar10Min()
+      + subirPasajeros()
+      + bajarPasajeros()
+    }
 
-class GUI {
-  - simulador: Simulador
-  + dibujarGrafo()
-  + animarBus(Bus)
-}
+    class Simulador {
+      - Grafo grafo
+      - List of Bus buses
+      - int tiempoActual
+      - Map Paradero->List of int tiemposEspera
+      + tick()
+    }
 
-class Main {
-  + main(String[])
-}
+    class GUI {
+      - Simulador simulador
+      + dibujarGrafo()
+      + animarBus(Bus)
+    }
 
-Grafo *-- Paradero
-Grafo *-- Arco
-Paradero o-- Pasajero
-Bus o-- Pasajero
-Simulador *-- Bus
-Bus --> Grafo
-GUI --> Simulador
+    class Main {
+      + main(String[])
+    }
 
-@enduml
+    Grafo *-- Paradero
+    Grafo *-- Arco
+    Paradero o-- Pasajero
+    Bus o-- Pasajero
+    Simulador *-- Bus
+    Bus --> Grafo
+    GUI --> Simulador
+
+```

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['tick_0',['tick',['../class_transporte_1_1_simulador.html#a97504a910946d359a386fef4ffd21a81',1,'Transporte::Simulador']]]
+  ['settiempollegadainstant_0',['setTiempoLlegadaInstant',['../class_transporte_1_1_pasajero.html#a1613995cf6884a912a07ab9ab925ddc5',1,'Transporte::Pasajero']]],
+  ['simular_1',['simular',['../class_transporte_1_1_simulador.html#aef8ebaf4b67d856ac96d1342f3937c7c',1,'Transporte::Simulador']]],
+  ['subirpasajeros_2',['subirPasajeros',['../class_transporte_1_1_bus.html#a43b670ea1325075659cb0947c092cc18',1,'Transporte::Bus']]]
 ];
