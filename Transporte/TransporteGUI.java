@@ -410,10 +410,7 @@ public class TransporteGUI extends JFrame {
         }
     }
 
-    // ==========================================
-    // MAIN DE PRUEBA
-    // ==========================================
-    
+
     /**
      * Método principal para ejecutar la GUI de forma independiente con datos de prueba.
      * Crea un grafo básico, buses y pasajeros iniciales.
@@ -449,26 +446,19 @@ public class TransporteGUI extends JFrame {
             grafo.agregarParadero(parada10);
 
             // 3. Crear arcos (Ida y Vuelta) para red ampliada
-            grafo.agregarArco(parada1, parada2, 10);
-            grafo.agregarArco(parada2, parada3, 8);
-            grafo.agregarArco(parada3, parada4, 12);
-            grafo.agregarArco(parada4, parada1, 15);
-
             // Conexiones adicionales
-            grafo.agregarArco(parada1, parada5, 6); // Centro -> Parque
-            grafo.agregarArco(parada5, parada2, 7); // Parque -> Terminal
-            grafo.agregarArco(parada2, parada6, 4); // Terminal -> Museo
-            grafo.agregarArco(parada6, parada9, 10); // Museo -> Mercado
-            grafo.agregarArco(parada9, parada3, 5); // Mercado -> Hospital
-            grafo.agregarArco(parada3, parada8, 6); // Hospital -> Plaza
-            grafo.agregarArco(parada8, parada4, 6); // Plaza -> Universidad
-            grafo.agregarArco(parada4, parada10, 7); // Universidad -> Aeropuerto
-            grafo.agregarArco(parada10, parada8, 6); // Aeropuerto -> Plaza
-            grafo.agregarArco(parada1, parada7, 5); // Centro -> Estacion
-            grafo.agregarArco(parada7, parada5, 10); // Estacion -> Parque
-            grafo.agregarArco(parada5, parada8, 8); // Parque -> Plaza
-
-            // Arcos de retorno (Ida/Vuelta)
+            grafo.agregarArco(parada1, parada5, 6); // Centro - Parque
+            grafo.agregarArco(parada5, parada2, 7); // Parque - Terminal
+            grafo.agregarArco(parada2, parada6, 4); // Terminal - Museo
+            grafo.agregarArco(parada6, parada9, 10); // Museo - Mercado
+            grafo.agregarArco(parada9, parada3, 5); // Mercado - Hospital
+            grafo.agregarArco(parada3, parada8, 6); // Hospital - Plaza
+            grafo.agregarArco(parada8, parada4, 6); // Plaza - Universidad
+            grafo.agregarArco(parada4, parada10, 7); // Universidad - Aeropuerto
+            grafo.agregarArco(parada10, parada8, 6); // Aeropuerto - Plaza
+            grafo.agregarArco(parada1, parada7, 5); // Centro - Estacion
+            grafo.agregarArco(parada7, parada5, 10); // Estacion - Parque
+            grafo.agregarArco(parada5, parada8, 8); // Parque - Plaza
             grafo.agregarArco(parada2, parada1, 10);
             grafo.agregarArco(parada3, parada2, 8);
             grafo.agregarArco(parada4, parada3, 12);
