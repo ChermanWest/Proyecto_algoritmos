@@ -236,7 +236,7 @@ public class TransporteGUI extends JFrame {
         animando = true;
         timerAnimacion.start();
     }
-    
+
     /**
      * Actualiza los mapas de posición lógica sin realizar animación.
      * Útil para la inicialización.
