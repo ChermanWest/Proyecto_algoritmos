@@ -331,7 +331,6 @@ public class TransporteGUI extends JFrame {
     }
 
     // MAIN 
-    // (Tu main original se mantiene igual, no necesita cambios para probar esto)
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(() -> {
@@ -414,4 +413,5 @@ public class TransporteGUI extends JFrame {
             new TransporteGUI(simulador);
         });
     }
+
 }
