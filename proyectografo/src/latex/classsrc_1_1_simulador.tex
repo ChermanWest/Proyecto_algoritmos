@@ -1,0 +1,63 @@
+\doxysection{src.\+Simulador Class Reference}
+\hypertarget{classsrc_1_1_simulador}{}\label{classsrc_1_1_simulador}\index{src.Simulador@{src.Simulador}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsrc_1_1_simulador_ae28e5bafb258f81a681a85d9def8782d}\label{classsrc_1_1_simulador_ae28e5bafb258f81a681a85d9def8782d} 
+{\bfseries Simulador} (\mbox{\hyperlink{classsrc_1_1_grafo}{Grafo}} grafo)
+\item 
+void \mbox{\hyperlink{classsrc_1_1_simulador_abba05fb03368d5fc0f57201f43770f1d}{agregar\+Bus}} (\mbox{\hyperlink{classsrc_1_1_bus}{Bus}} bus)
+\item 
+void \mbox{\hyperlink{classsrc_1_1_simulador_aee7ab1a2f7d0e82fd61410ac22631e40}{tick}} ()
+\item 
+int \mbox{\hyperlink{classsrc_1_1_simulador_a0876c92032a4d85501b4016f8165e380}{get\+Tiempo\+Actual}} ()
+\item 
+List$<$ \mbox{\hyperlink{classsrc_1_1_bus}{Bus}} $>$ \mbox{\hyperlink{classsrc_1_1_simulador_ad58667322e15e1816d4a320b7586a8e1}{get\+Buses}} ()
+\item 
+\mbox{\hyperlink{classsrc_1_1_grafo}{Grafo}} \mbox{\hyperlink{classsrc_1_1_simulador_a2d6a6a24efe22daeb171dec6f1dfa4d4}{get\+Grafo}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classsrc_1_1_simulador}{Simulador} de la red de transporte. Controla el avance del tiempo (ticks), la generación de pasajeros y coordina el movimiento de los buses.
+
+1 tick = 10 minutos de tiempo simulado. 
+
+\label{doc-func-members}
+\Hypertarget{classsrc_1_1_simulador_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsrc_1_1_simulador_abba05fb03368d5fc0f57201f43770f1d}\index{src.Simulador@{src.Simulador}!agregarBus@{agregarBus}}
+\index{agregarBus@{agregarBus}!src.Simulador@{src.Simulador}}
+\doxysubsubsection{\texorpdfstring{agregarBus()}{agregarBus()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_simulador_abba05fb03368d5fc0f57201f43770f1d} 
+void src.\+Simulador.\+agregar\+Bus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsrc_1_1_bus}{Bus}}}]{bus}{}\end{DoxyParamCaption})}
+
+Agrega un bus a la simulación. \Hypertarget{classsrc_1_1_simulador_ad58667322e15e1816d4a320b7586a8e1}\index{src.Simulador@{src.Simulador}!getBuses@{getBuses}}
+\index{getBuses@{getBuses}!src.Simulador@{src.Simulador}}
+\doxysubsubsection{\texorpdfstring{getBuses()}{getBuses()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_simulador_ad58667322e15e1816d4a320b7586a8e1} 
+List$<$ \mbox{\hyperlink{classsrc_1_1_bus}{Bus}} $>$ src.\+Simulador.\+get\+Buses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Retorna los buses activos. \Hypertarget{classsrc_1_1_simulador_a2d6a6a24efe22daeb171dec6f1dfa4d4}\index{src.Simulador@{src.Simulador}!getGrafo@{getGrafo}}
+\index{getGrafo@{getGrafo}!src.Simulador@{src.Simulador}}
+\doxysubsubsection{\texorpdfstring{getGrafo()}{getGrafo()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_simulador_a2d6a6a24efe22daeb171dec6f1dfa4d4} 
+\mbox{\hyperlink{classsrc_1_1_grafo}{Grafo}} src.\+Simulador.\+get\+Grafo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Retorna el grafo de la simulación. \Hypertarget{classsrc_1_1_simulador_a0876c92032a4d85501b4016f8165e380}\index{src.Simulador@{src.Simulador}!getTiempoActual@{getTiempoActual}}
+\index{getTiempoActual@{getTiempoActual}!src.Simulador@{src.Simulador}}
+\doxysubsubsection{\texorpdfstring{getTiempoActual()}{getTiempoActual()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_simulador_a0876c92032a4d85501b4016f8165e380} 
+int src.\+Simulador.\+get\+Tiempo\+Actual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Retorna el tiempo actual en ticks. \Hypertarget{classsrc_1_1_simulador_aee7ab1a2f7d0e82fd61410ac22631e40}\index{src.Simulador@{src.Simulador}!tick@{tick}}
+\index{tick@{tick}!src.Simulador@{src.Simulador}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_simulador_aee7ab1a2f7d0e82fd61410ac22631e40} 
+void src.\+Simulador.\+tick (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ejecuta un tick de simulación. Representa 10 minutos de tiempo real. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simulador.\+java\end{DoxyCompactItemize}

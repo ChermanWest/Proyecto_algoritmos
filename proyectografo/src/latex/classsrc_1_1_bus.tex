@@ -1,0 +1,58 @@
+\doxysection{src.\+Bus Class Reference}
+\hypertarget{classsrc_1_1_bus}{}\label{classsrc_1_1_bus}\index{src.Bus@{src.Bus}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsrc_1_1_bus_a3c65f6e979e61a459fc05f2b28eeff7c}\label{classsrc_1_1_bus_a3c65f6e979e61a459fc05f2b28eeff7c} 
+{\bfseries Bus} (int id, int capacidad\+Max, List$<$ \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} $>$ ruta\+Ida, List$<$ \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} $>$ ruta\+Vuelta)
+\item 
+\Hypertarget{classsrc_1_1_bus_a8a28be00c4e6ebd1b35f3aac3ea1630a}\label{classsrc_1_1_bus_a8a28be00c4e6ebd1b35f3aac3ea1630a} 
+int {\bfseries get\+Id} ()
+\item 
+\Hypertarget{classsrc_1_1_bus_a2a2c66b70f4ee0f27e01f5defb4ad71a}\label{classsrc_1_1_bus_a2a2c66b70f4ee0f27e01f5defb4ad71a} 
+int {\bfseries get\+Capacidad\+Actual} ()
+\item 
+\Hypertarget{classsrc_1_1_bus_ae0833cf46fdefcf1ead9cf8c467b6001}\label{classsrc_1_1_bus_ae0833cf46fdefcf1ead9cf8c467b6001} 
+int {\bfseries get\+Capacidad\+Max} ()
+\item 
+\Hypertarget{classsrc_1_1_bus_a886124d49108cfa68255fc3cd325d63b}\label{classsrc_1_1_bus_a886124d49108cfa68255fc3cd325d63b} 
+\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} {\bfseries get\+Nodo\+Actual} ()
+\item 
+\Hypertarget{classsrc_1_1_bus_a4b864b913bab61c15ff3c979b84d1b86}\label{classsrc_1_1_bus_a4b864b913bab61c15ff3c979b84d1b86} 
+\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} {\bfseries get\+Nodo\+Siguiente} ()
+\item 
+double \mbox{\hyperlink{classsrc_1_1_bus_a47bebc9c9ac7b7404553f6cf5c3712ef}{get\+Progreso}} ()
+\item 
+void \mbox{\hyperlink{classsrc_1_1_bus_ab3f3b6ef97862af30e566257a9b6604a}{avanzar}} (\mbox{\hyperlink{classsrc_1_1_grafo}{Grafo}} grafo)
+\item 
+\Hypertarget{classsrc_1_1_bus_a2751797ea2d857da0039e08cb8796852}\label{classsrc_1_1_bus_a2751797ea2d857da0039e08cb8796852} 
+void {\bfseries subir\+Pasajeros} ()
+\item 
+\Hypertarget{classsrc_1_1_bus_aed59c2c6c2429dd4f1bc76c8399605f3}\label{classsrc_1_1_bus_aed59c2c6c2429dd4f1bc76c8399605f3} 
+void {\bfseries bajar\+Pasajeros} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa un bus que se desplaza por una ruta avanzando 10 minutos por tick. 
+
+\label{doc-func-members}
+\Hypertarget{classsrc_1_1_bus_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsrc_1_1_bus_ab3f3b6ef97862af30e566257a9b6604a}\index{src.Bus@{src.Bus}!avanzar@{avanzar}}
+\index{avanzar@{avanzar}!src.Bus@{src.Bus}}
+\doxysubsubsection{\texorpdfstring{avanzar()}{avanzar()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_bus_ab3f3b6ef97862af30e566257a9b6604a} 
+void src.\+Bus.\+avanzar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsrc_1_1_grafo}{Grafo}}}]{grafo}{}\end{DoxyParamCaption})}
+
+Avanza 1 tick (10 minutos) \Hypertarget{classsrc_1_1_bus_a47bebc9c9ac7b7404553f6cf5c3712ef}\index{src.Bus@{src.Bus}!getProgreso@{getProgreso}}
+\index{getProgreso@{getProgreso}!src.Bus@{src.Bus}}
+\doxysubsubsection{\texorpdfstring{getProgreso()}{getProgreso()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_bus_a47bebc9c9ac7b7404553f6cf5c3712ef} 
+double src.\+Bus.\+get\+Progreso (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Retorna progreso del arco (0.\+0 a 1.\+0) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bus.\+java\end{DoxyCompactItemize}

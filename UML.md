@@ -3,14 +3,12 @@
 
 ```mermaid
 classDiagram
-    class Paradero {
-      - int id
-      - String nombre
-      - Queue of Pasajero cola
-      - double posicionX
-      - double posicionY
-      + agregarPasajero(Pasajero)
-      + removerPasajero(): Pasajero
+    class Nodo {
+        -int id
+        -String nombre
+        -Queue~Pasajero~ cola
+        -double posicionX
+        -double posicionY
     }
 
     class Pasajero {

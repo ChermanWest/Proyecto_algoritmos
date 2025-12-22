@@ -1,0 +1,60 @@
+\doxysection{src.\+Nodo Class Reference}
+\hypertarget{classsrc_1_1_nodo}{}\label{classsrc_1_1_nodo}\index{src.Nodo@{src.Nodo}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsrc_1_1_nodo_aa38e0f8f031252c8c68d0a701a38598c}\label{classsrc_1_1_nodo_aa38e0f8f031252c8c68d0a701a38598c} 
+{\bfseries Nodo} (int id, String nombre, double posicionX, double posicionY)
+\item 
+\Hypertarget{classsrc_1_1_nodo_a74e5c9dcfa3bb0a01f735c32c5011b66}\label{classsrc_1_1_nodo_a74e5c9dcfa3bb0a01f735c32c5011b66} 
+int {\bfseries get\+Id} ()
+\item 
+\Hypertarget{classsrc_1_1_nodo_a96ee74dd6c29cc2b34163dec3cecd975}\label{classsrc_1_1_nodo_a96ee74dd6c29cc2b34163dec3cecd975} 
+String {\bfseries get\+Nombre} ()
+\item 
+\Hypertarget{classsrc_1_1_nodo_ad1ba5b4259a0b34c3ba91dbf2d844cb1}\label{classsrc_1_1_nodo_ad1ba5b4259a0b34c3ba91dbf2d844cb1} 
+double {\bfseries get\+PosicionX} ()
+\item 
+\Hypertarget{classsrc_1_1_nodo_a22098a998d0877dab6d298da7f09cfe1}\label{classsrc_1_1_nodo_a22098a998d0877dab6d298da7f09cfe1} 
+double {\bfseries get\+PosicionY} ()
+\item 
+\Hypertarget{classsrc_1_1_nodo_ac2f584d77a8966358123a4ef8e282971}\label{classsrc_1_1_nodo_ac2f584d77a8966358123a4ef8e282971} 
+Queue$<$ \mbox{\hyperlink{classsrc_1_1_pasajero}{Pasajero}} $>$ {\bfseries get\+Cola} ()
+\item 
+void \mbox{\hyperlink{classsrc_1_1_nodo_a87cea9954af8f68b2793577b33a0f640}{agregar\+Pasajero}} (\mbox{\hyperlink{classsrc_1_1_pasajero}{Pasajero}} p)
+\item 
+\mbox{\hyperlink{classsrc_1_1_pasajero}{Pasajero}} \mbox{\hyperlink{classsrc_1_1_nodo_a7db104cacf2e6e4aa961507799dfb69e}{remover\+Pasajero}} ()
+\item 
+int \mbox{\hyperlink{classsrc_1_1_nodo_a832379050ebaa7d3c0ccf031562aff3b}{get\+Esperando\+Cuantos}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa una parada (paradero) en la red de transporte. Cada parada mantiene una cola de pasajeros esperando subir al bus. 
+
+\label{doc-func-members}
+\Hypertarget{classsrc_1_1_nodo_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsrc_1_1_nodo_a87cea9954af8f68b2793577b33a0f640}\index{src.Nodo@{src.Nodo}!agregarPasajero@{agregarPasajero}}
+\index{agregarPasajero@{agregarPasajero}!src.Nodo@{src.Nodo}}
+\doxysubsubsection{\texorpdfstring{agregarPasajero()}{agregarPasajero()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_nodo_a87cea9954af8f68b2793577b33a0f640} 
+void src.\+Nodo.\+agregar\+Pasajero (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsrc_1_1_pasajero}{Pasajero}}}]{p}{}\end{DoxyParamCaption})}
+
+Agrega un pasajero a la cola de la parada. \Hypertarget{classsrc_1_1_nodo_a832379050ebaa7d3c0ccf031562aff3b}\index{src.Nodo@{src.Nodo}!getEsperandoCuantos@{getEsperandoCuantos}}
+\index{getEsperandoCuantos@{getEsperandoCuantos}!src.Nodo@{src.Nodo}}
+\doxysubsubsection{\texorpdfstring{getEsperandoCuantos()}{getEsperandoCuantos()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_nodo_a832379050ebaa7d3c0ccf031562aff3b} 
+int src.\+Nodo.\+get\+Esperando\+Cuantos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Retorna la cantidad de pasajeros esperando en la parada. \Hypertarget{classsrc_1_1_nodo_a7db104cacf2e6e4aa961507799dfb69e}\index{src.Nodo@{src.Nodo}!removerPasajero@{removerPasajero}}
+\index{removerPasajero@{removerPasajero}!src.Nodo@{src.Nodo}}
+\doxysubsubsection{\texorpdfstring{removerPasajero()}{removerPasajero()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_nodo_a7db104cacf2e6e4aa961507799dfb69e} 
+\mbox{\hyperlink{classsrc_1_1_pasajero}{Pasajero}} src.\+Nodo.\+remover\+Pasajero (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Remueve y retorna el primer pasajero de la cola. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Nodo.\+java\end{DoxyCompactItemize}

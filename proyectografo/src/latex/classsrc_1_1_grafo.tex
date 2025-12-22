@@ -1,0 +1,59 @@
+\doxysection{src.\+Grafo Class Reference}
+\hypertarget{classsrc_1_1_grafo}{}\label{classsrc_1_1_grafo}\index{src.Grafo@{src.Grafo}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsrc_1_1_grafo_af4abdbdb4c5943eaeece4dc841c1a439}{agregar\+Paradero}} (\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} nodo)
+\item 
+void \mbox{\hyperlink{classsrc_1_1_grafo_a0f547e806907b3a264e70fbf657eeeb6}{agregar\+Arco}} (\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} origen, \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} destino, int tiempo)
+\item 
+\Hypertarget{classsrc_1_1_grafo_a2caaf54076ea773821e718dc6cfbbf0a}\label{classsrc_1_1_grafo_a2caaf54076ea773821e718dc6cfbbf0a} 
+List$<$ \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} $>$ {\bfseries get\+Paraderos} ()
+\item 
+\Hypertarget{classsrc_1_1_grafo_a4b24f367da79a8c5fa6b5e20de6b1f66}\label{classsrc_1_1_grafo_a4b24f367da79a8c5fa6b5e20de6b1f66} 
+\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} {\bfseries get\+Paradero} (int id)
+\item 
+\Hypertarget{classsrc_1_1_grafo_ad990be15032477e52e82f915dc86df06}\label{classsrc_1_1_grafo_ad990be15032477e52e82f915dc86df06} 
+List$<$ \mbox{\hyperlink{classsrc_1_1_arco}{Arco}} $>$ {\bfseries get\+Adyacentes} (\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} nodo)
+\item 
+List$<$ \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} $>$ \mbox{\hyperlink{classsrc_1_1_grafo_a2f21a6a7a409731febe34f116e409ee9}{dijkstra}} (\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} origen, \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} destino)
+\item 
+\mbox{\hyperlink{classsrc_1_1_arco}{Arco}} \mbox{\hyperlink{classsrc_1_1_grafo_a7a9e70c60444ea90c30c32943f688537}{get\+Arco}} (\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} origen, \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} destino)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa el grafo de paradas en la red de transporte. Permite calcular rutas óptimas entre paradas usando algoritmo de Dijkstra. 
+
+\label{doc-func-members}
+\Hypertarget{classsrc_1_1_grafo_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsrc_1_1_grafo_a0f547e806907b3a264e70fbf657eeeb6}\index{src.Grafo@{src.Grafo}!agregarArco@{agregarArco}}
+\index{agregarArco@{agregarArco}!src.Grafo@{src.Grafo}}
+\doxysubsubsection{\texorpdfstring{agregarArco()}{agregarArco()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_grafo_a0f547e806907b3a264e70fbf657eeeb6} 
+void src.\+Grafo.\+agregar\+Arco (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}}}]{origen}{, }\item[{\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}}}]{destino}{, }\item[{int}]{tiempo}{}\end{DoxyParamCaption})}
+
+Agrega una arista (conexión) entre dos paradas con un tiempo específico. \Hypertarget{classsrc_1_1_grafo_af4abdbdb4c5943eaeece4dc841c1a439}\index{src.Grafo@{src.Grafo}!agregarParadero@{agregarParadero}}
+\index{agregarParadero@{agregarParadero}!src.Grafo@{src.Grafo}}
+\doxysubsubsection{\texorpdfstring{agregarParadero()}{agregarParadero()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_grafo_af4abdbdb4c5943eaeece4dc841c1a439} 
+void src.\+Grafo.\+agregar\+Paradero (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}}}]{nodo}{}\end{DoxyParamCaption})}
+
+Agrega una parada (nodo) al grafo. \Hypertarget{classsrc_1_1_grafo_a2f21a6a7a409731febe34f116e409ee9}\index{src.Grafo@{src.Grafo}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!src.Grafo@{src.Grafo}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_grafo_a2f21a6a7a409731febe34f116e409ee9} 
+List$<$ \mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}} $>$ src.\+Grafo.\+dijkstra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}}}]{origen}{, }\item[{\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}}}]{destino}{}\end{DoxyParamCaption})}
+
+Implementa el algoritmo de Dijkstra para encontrar la ruta más corta entre dos paradas. \Hypertarget{classsrc_1_1_grafo_a7a9e70c60444ea90c30c32943f688537}\index{src.Grafo@{src.Grafo}!getArco@{getArco}}
+\index{getArco@{getArco}!src.Grafo@{src.Grafo}}
+\doxysubsubsection{\texorpdfstring{getArco()}{getArco()}}
+{\footnotesize\ttfamily \label{classsrc_1_1_grafo_a7a9e70c60444ea90c30c32943f688537} 
+\mbox{\hyperlink{classsrc_1_1_arco}{Arco}} src.\+Grafo.\+get\+Arco (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}}}]{origen}{, }\item[{\mbox{\hyperlink{classsrc_1_1_nodo}{Nodo}}}]{destino}{}\end{DoxyParamCaption})}
+
+Obtiene el arco entre dos nodos, si existe. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Grafo.\+java\end{DoxyCompactItemize}
